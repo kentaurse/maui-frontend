@@ -1,0 +1,292 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+
+  /* Toggle B */
+  input:checked~.dot {
+    transform: translateX(100%);
+    background-color: #1199FA;
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #555;
+    height: 30px;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #666;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb {
+      height: 15px;
+    }
+  }
+
+  /* Scroll track styles (Background) */
+  .scrollbar::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+  }
+}
+
+/* poppins-regular - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/poppins-v15-latin-regular.eot');
+  /* IE9 Compat Modes */
+  src: local(''),
+    url('../fonts/poppins-v15-latin-regular.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('../fonts/poppins-v15-latin-regular.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../fonts/poppins-v15-latin-regular.woff') format('woff'),
+    /* Modern Browsers */
+    url('../fonts/poppins-v15-latin-regular.ttf') format('truetype'),
+    /* Safari, Android, iOS */
+    url('../fonts/poppins-v15-latin-regular.svg#Poppins') format('svg');
+  /* Legacy iOS */
+}
+
+.transition-fade-enter,
+.transition-fade-exit {
+  transition: opacity 1000ms ease-out;
+}
+
+
+.transition-fade-enter {
+  opacity: 0;
+}
+
+.transition-fade-enter.transition-fade-enter-active {
+  opacity: 1;
+}
+
+.transition-fade-exit {
+  opacity: 1;
+}
+
+.transition-fade-exit-active {
+  opacity: 0;
+}
+
+/* ===================== checkbox =====================*/
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 45px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  height: 28px;
+  width: 28px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid gray;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input~.checkmark {
+  background-color: transparent;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked~.checkmark {
+  background-color: transparent;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 8px;
+  top: 2px;
+  width: 11px;
+  height: 18px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+@media only screen and (max-width: 600px) {
+  .checkbox-container .checkmark:after {
+    left: 6px;
+    width: 7px;
+    height: 12px;
+  }
+}
+
+.dark .checkbox-container .checkmark:after {
+  border: solid #1199FA;
+  border-width: 0 3px 3px 0;
+}
+
+/* Borrow Decoration */
+.borrow-span-borrow-dark {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: rgba(255, 255, 255, .17);
+  -webkit-text-stroke-width: 3px;
+}
+
+.borrow-span-borrow {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: rgba(0, 0, 0, .2);
+  -webkit-text-stroke-width: 3px;
+}
+
+.borrow-span-soon {
+  text-shadow: 8px 20px 4px rgba(0, 0, 0, 0.19);
+}
+
+.borrow-span-soon-dark {
+  text-shadow: 3px 24px 4px rgba(112, 112, 112, 0.36);
+}
+
+.login-text-shadow {
+  text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.56);
+}
+
+.text-container {
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  letter-spacing: -.022em;
+  line-height: 1.47059;
+}
+
+.text-container ol {
+  padding-left: 40px;
+  list-style: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .text-container ol {
+    padding-left: 20px;
+  }
+}
+
+.text-container a {
+  text-decoration: none;
+  color: #06c;
+  letter-spacing: inherit;
+}
+
+.text-container strong {
+  font-weight: 600;
+}
+
+/* my animation */
+
+.star {
+  position: absolute;
+  height: 4px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(-45deg,
+      #eef0f5, rgba(0, 0, 255, 0));
+  
+  filter: drop-shadow(0 0 6px #d7dff0);
+  animation: tail 3000ms ease-in-out infinite,
+  shooting 3000ms ease-in 4000ms infinite;
+}
+
+.card-in {
+  animation: fadeinout 10s infinite;
+  animation-delay: 5s;
+}
+
+.card-out {
+  animation: fadeoutin 10s infinite;
+  animation-delay: 5s;
+}
+
+/* This code will help to generate
+      effect in tail of star */
+@keyframes tail {
+  0% {
+    width: 0;
+  }
+
+  30% {
+    width: 50px;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+/* Here we make shooting effect */
+@keyframes shooting {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(150px);
+  }
+}
+
+@-webkit-keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeoutin {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes fadeoutin {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0; }
+}

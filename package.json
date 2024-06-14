@@ -1,0 +1,102 @@
+{
+  "name": "maui2-frontend-user",
+  "version": "0.2.0",
+  "private": true,
+  "dependencies": {
+    "@hookform/resolvers": "^2.4.0",
+    "@react-oauth/google": "^0.2.6",
+    "@terra-money/terra.js": "^3.0.7",
+    "@terra-money/wallet-provider": "^3.8.0",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "@themesberg/flowbite": "^1.3.0",
+    "@transak/transak-sdk": "^1.0.31",
+    "ajv": "^8.11.0",
+    "async": "^3.2.3",
+    "autoprefixer": "^10.4.2",
+    "axios": "^0.24.0",
+    "buffer": "^6.0.3",
+    "chart.js": "^3.9.1",
+    "connected-react-router": "^6.9.2",
+    "ethers": "^5.6.9",
+    "fbjs": "^3.0.2",
+    "function-plot": "^1.22.8",
+    "gsap": "^3.9.1",
+    "jwt-decode": "^3.1.2",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "plaid": "^10.9.0",
+    "plaid-threads": "^11.5.0",
+    "postcss": "^8.4.5",
+    "react": "^17.0.2",
+    "react-app-rewired": "^2.1.11",
+    "react-chartjs-2": "^4.3.1",
+    "react-confirm-alert": "^2.8.0",
+    "react-cookie": "^4.1.1",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-country-region-selector": "^3.4.0",
+    "react-data-table-component": "^7.4.7",
+    "react-device-detect": "^2.1.2",
+    "react-dom": "^17.0.2",
+    "react-dropzone": "^14.2.2",
+    "react-google-authorize": "^1.0.4",
+    "react-google-login": "^5.2.2",
+    "react-hook-form": "^7.2.1",
+    "react-idle-timer": "^4.6.4",
+    "react-phone-input-2": "^2.15.1",
+    "react-plaid-link": "^3.3.2",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^5.2.0",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "react-scripts": "5.0.0",
+    "react-select-country-list": "^2.2.3",
+    "react-social-login": "^3.4.15",
+    "react-social-login-buttons": "^3.6.1",
+    "react-text-mask": "^5.1.0",
+    "react-tiny-popover": "^7.0.1",
+    "react-toastify": "^8.1.1",
+    "react-transition-group": "^4.4.5",
+    "reactjs-social-login": "^2.5.6",
+    "redux": "^4.1.2",
+    "redux-actions": "^2.6.5",
+    "redux-logger": "^3.0.6",
+    "redux-saga": "^1.1.3",
+    "stream": "0.0.2",
+    "stream-browserify": "^3.0.0",
+    "styled-components": "^5.3.3",
+    "tailwindcss": "^3.0.13",
+    "text-mask-addons": "^3.7.1",
+    "web-vitals": "^2.1.3",
+    "yup": "^0.32.9"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "crypto-browserify": "^3.12.0",
+    "mini-css-extract-plugin": "2.4.5",
+    "process": "^0.11.10"
+  }
+}
